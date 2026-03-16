@@ -13,7 +13,7 @@ name: CI
 on: [push, pull_request]
 jobs:
   test:
-    uses: johnhenry/.github/.github/workflow-templates/ci-node.yml@main
+    uses: johnhenry/browsermesh-ci/.github/workflow-templates/ci-node.yml@main
     with:
       node-version: '22'
       test-command: 'npm test'
@@ -27,7 +27,7 @@ name: CI
 on: [push, pull_request]
 jobs:
   test:
-    uses: johnhenry/.github/.github/workflow-templates/ci-pnpm.yml@main
+    uses: johnhenry/browsermesh-ci/.github/workflow-templates/ci-pnpm.yml@main
     with:
       node-version: '22'
       pnpm-version: '9'
@@ -43,7 +43,7 @@ on:
     tags: ['v*']
 jobs:
   publish:
-    uses: johnhenry/.github/.github/workflow-templates/publish-npm.yml@main
+    uses: johnhenry/browsermesh-ci/.github/workflow-templates/publish-npm.yml@main
     with:
       node-version: '22'
     secrets:
